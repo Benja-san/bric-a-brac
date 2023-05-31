@@ -1,14 +1,16 @@
+@use "../../../../import" as *;
+
 .global-link {
   padding: 1rem 2.5rem;
-  background-color: rgb(67, 67, 199);
-  color: white;
-  border-radius: 10px;
-  border: 1px solid white;
+  background-color: $primaryColor;
+  color: $brightColor;
+  border-radius: $borderRadius;
+  border: 1px solid $brightColor;
   transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out,
     border 0.4s ease-in-out;
   &:hover {
-    background-color: white;
-    color: rgb(67, 67, 199);
-    border: 1px solid rgb(67, 67, 199);
+    background-color: $brightColor;
+    color: $primaryColor;
+    border: 1px solid $primaryColor;
   }
 }

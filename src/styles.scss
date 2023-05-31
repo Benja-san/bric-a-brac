@@ -1,9 +1,11 @@
+@use "./import" as *;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  color: black;
+  color: $darkColor;
   font-weight: 400;
 }
 
@@ -11,7 +13,11 @@ a,
 button {
   cursor: pointer;
   text-decoration: none;
-  color: black;
+  color: $darkColor;
   background-color: transparent;
   border: none;
+}
+
+ul {
+  list-style: none;
 }

@@ -1,0 +1,13 @@
+@use "../../../../import" as *;
+
+.product-card {
+  border: 1px solid $primaryColor;
+  display: block;
+  padding: 2rem;
+  border-radius: $borderRadius;
+  h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+}

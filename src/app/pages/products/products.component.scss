@@ -1,0 +1,10 @@
+.products-section {
+  ul {
+    margin: 2rem 0;
+    li {
+      &:not(:last-of-type) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

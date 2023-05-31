@@ -1,0 +1,9 @@
+<a class="product-card" [routerLink]="['/products', key + 1]">
+  <article>
+    <h3>{{ product.name }}</h3>
+    <div>
+      <p>{{ product.price | currency }} HT</p>
+      <p>{{ product.priceWithVat | currency }} TTC</p>
+    </div>
+  </article>
+</a>

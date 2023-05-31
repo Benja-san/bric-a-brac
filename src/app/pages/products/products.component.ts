@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Product } from 'src/app/models/Product';
+import { PRODUCTS } from 'src/data/PRODUCTS';
 
 @Component({
   selector: 'app-products',
@@ -7,14 +8,8 @@ import { Product } from 'src/app/models/Product';
   styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent {
-  private _products: Product[] = [
-    new Product('I phone 14', 1600),
-    new Product('redMi', 300),
-    new Product('Pixel Pro 7', 900),
-    new Product('Samsung Fold', 1200),
-    new Product('Playstation 5', 500),
-    new Product('Switch Oled', 350),
-  ];
+  constructor() {}
+  private _products: Product[] = PRODUCTS;
 
   get products() {
     return this._products;
