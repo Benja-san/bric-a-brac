@@ -1,0 +1,16 @@
+<section class="products-section">
+  <h2>Catalogue :</h2>
+  <ul>
+    <li *ngFor="let product of products; let key = index">
+      <a [routerLink]="['/product', key + 1]">
+        <article>
+          <h3>{{ product.name }}</h3>
+          <div>
+            <p>{{ product.price | currency }} HT</p>
+            <p>{{ product.priceWithVat | currency }} TTC</p>
+          </div>
+        </article>
+      </a>
+    </li>
+  </ul>
+</section>
