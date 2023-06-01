@@ -1,0 +1,31 @@
+@use "../../../../import" as *;
+
+.inputContainer {
+  margin-bottom: 1rem;
+  label {
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin-bottom: 0.2rem;
+    display: block;
+  }
+  input {
+    border: none;
+    border-bottom: 1px solid $darkColor;
+    outline: none;
+    padding-bottom: 0.2rem;
+    &:focus {
+      border-bottom: 1px solid $primaryColor;
+    }
+    &.ng-invalid.ng-dirty {
+      border-bottom: 1px solid $alertColor;
+    }
+  }
+  .error-msg {
+    div {
+      margin-top: 0.2rem;
+      color: $alertColor;
+      font-size: 0.7rem;
+      font-weight: 300;
+    }
+  }
+}

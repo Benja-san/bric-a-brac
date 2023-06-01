@@ -1,8 +1,15 @@
 <header class="global-header">
-  <h1>Bienvenue dans mon bric-a-brac</h1>
-  <div class="link-container">
-    <app-global-link [link]="homeLink">Back Home</app-global-link>
+  <div class="logo-container">
+    <app-global-link [link]="homeLink"
+      >Bienvenue dans mon bric-a-brac</app-global-link
+    >
   </div>
+  <ul class="links-container">
+    <li>
+      <a routerLink="/products">Produits</a>
+      <a routerLink="/register">Register</a>
+    </li>
+  </ul>
 </header>
 <main>
   <router-outlet></router-outlet>

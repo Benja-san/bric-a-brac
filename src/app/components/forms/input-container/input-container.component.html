@@ -1,0 +1,26 @@
+<div [formGroup]="userForm" class="inputContainer">
+  <label for="{{ controlName }}">{{ label }}</label>
+  <input
+    id="{{ controlName }}"
+    type="{{ type }}"
+    formControlName="{{ controlName }}"
+  />
+  <div
+    *ngIf="
+      userForm.controls[controlName].errors &&
+      userForm.controls[controlName].dirty
+    "
+    class="error-msg"
+  >
+    <div [hidden]="!userForm.controls[controlName].errors">
+      Ajoutez votre {{ label }}
+    </div>
+
+    <div
+      *ngIf="controlName === 'email'"
+      [hidden]="!userForm.controls[controlName].invalid"
+    >
+      {{ label }} non conforme
+    </div>
+  </div>
+</div>

@@ -20,8 +20,17 @@
     font-size: 3rem;
     line-height: 3rem;
   }
-  .link-container {
+  .logo-container {
     margin: 2rem 0;
+  }
+  .links-container {
+    li {
+      a {
+        &:not(:last-of-type) {
+          margin-right: 2rem;
+        }
+      }
+    }
   }
 }
 

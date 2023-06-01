@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ProductComponent } from './pages/product/product.component';
+import { UserRegisterComponent } from './pages/user-register/user-register.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'products/:productkey',
     component: ProductComponent,
+  },
+  {
+    path: 'register',
+    component: UserRegisterComponent,
   },
 ];
 
