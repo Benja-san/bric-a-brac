@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Product } from 'src/app/models/Product';
-import { PRODUCTS } from 'src/data/PRODUCTS';
+import { ProductsService } from 'src/app/services/products/products.service';
 
 @Component({
   selector: 'app-products',
@@ -8,10 +8,16 @@ import { PRODUCTS } from 'src/data/PRODUCTS';
   styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent {
-  constructor() {}
-  private _products: Product[] = PRODUCTS;
+  constructor(private productsService: ProductsService) {}
+  private _products!: Product[];
 
   get products() {
     return this._products;
+  }
+
+  ngOnInit(): void {
+    this.productsService.getProducts().subscribe((products) => {
+      this._products = products;
+    });
   }
 }

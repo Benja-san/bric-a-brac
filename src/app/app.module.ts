@@ -11,6 +11,7 @@ import { ProductCardComponent } from './components/products/product-card/product
 import { ProductComponent } from './pages/product/product.component';
 import { UserRegisterComponent } from './pages/user-register/user-register.component';
 import { InputContainerComponent } from './components/forms/input-container/input-container.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,12 @@ import { InputContainerComponent } from './components/forms/input-container/inpu
     UserRegisterComponent,
     InputContainerComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

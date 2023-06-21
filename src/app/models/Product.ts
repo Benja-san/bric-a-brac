@@ -1,13 +1,23 @@
 export class Product {
   static readonly VAT: number = 0.2;
   constructor(
+    private _id: number,
     private _name: string,
+    private _slug: string,
     private _price: number,
     private _onSales: boolean = false
   ) {}
 
+  get id() {
+    return this._id;
+  }
+
   get name() {
     return this._name;
+  }
+
+  get slug() {
+    return this._slug;
   }
 
   get price() {

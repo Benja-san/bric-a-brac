@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/models/Product';
-import { PRODUCTS } from 'src/data/PRODUCTS';
+import { ProductsService } from 'src/app/services/products/products.service';
 
 @Component({
   selector: 'app-product',
@@ -9,16 +9,22 @@ import { PRODUCTS } from 'src/data/PRODUCTS';
   styleUrls: ['./product.component.scss'],
 })
 export class ProductComponent {
-  private keyID!: string;
-  private _product!: Product;
+  private slug!: string;
+  private _product!: any;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private productsService: ProductsService
+  ) {}
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
-      this.keyID = params['productkey'];
+      this.slug = params['productSlug'];
     });
-    this._product = PRODUCTS[parseInt(this.keyID) - 1];
+    this.productsService.getProduct(this.slug).subscribe((product) => {
+      this._product = product;
+    });
+    console.log(this._product);
   }
 
   get product() {

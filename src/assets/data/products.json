@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "I phone 14",
+    "slug": "i-phone-14",
+    "price": 1600,
+    "onSales": "false"
+  },
+  {
+    "id": 2,
+    "name": "redMi",
+    "slug": "redmi",
+    "price": 300,
+    "onSales": "false"
+  },
+  {
+    "id": 3,
+    "name": "Pixel Pro 7",
+    "slug": "pixel-pro-7",
+    "price": 900,
+    "onSales": "false"
+  },
+  {
+    "id": 4,
+    "name": "Samsung Fold",
+    "slug": "samsung-fold",
+    "price": 1200,
+    "onSales": "false"
+  },
+  {
+    "id": 5,
+    "name": "Playstation 5",
+    "slug": "playstation-5",
+    "price": 500,
+    "onSales": "false"
+  },
+  {
+    "id": 6,
+    "name": "Switch Oled",
+    "slug": "switch-oled",
+    "price": 350,
+    "onSales": "false"
+  }
+]

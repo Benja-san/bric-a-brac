@@ -8,5 +8,4 @@ import { Product } from 'src/app/models/Product';
 })
 export class ProductCardComponent {
   @Input() product!: Product;
-  @Input() key!: number;
 }
