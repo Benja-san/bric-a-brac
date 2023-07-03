@@ -10,7 +10,7 @@ import { ProductsService } from 'src/app/services/products/products.service';
 })
 export class ProductComponent {
   private slug!: string;
-  private _product!: any;
+  private _product!: Product;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,7 +24,6 @@ export class ProductComponent {
     this.productsService.getProduct(this.slug).subscribe((product) => {
       this._product = product;
     });
-    console.log(this._product);
   }
 
   get product() {
