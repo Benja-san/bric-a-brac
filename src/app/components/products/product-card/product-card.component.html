@@ -2,7 +2,9 @@
   <article>
     <h3>{{ product.name }}</h3>
     <div>
-      <p>{{ product.price | currency }} HT</p>
+      <p [ngClass]="{ 'on-sales': product.onSales }">
+        {{ product.price | currency }} HT
+      </p>
       <p>{{ product.priceWithVat | currency }} TTC</p>
     </div>
   </article>

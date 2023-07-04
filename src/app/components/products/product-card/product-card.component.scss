@@ -10,4 +10,10 @@
     font-weight: 500;
     margin-bottom: 1rem;
   }
+  p {
+    width: max-content;
+    &.on-sales {
+      background-color: rgb(233, 233, 49);
+    }
+  }
 }

@@ -15,6 +15,18 @@ export class ProductsComponent {
     return this._products;
   }
 
+  public handleOnSalesResearch() {
+    this.productsService.getOnSalesProducts().subscribe((data) => {
+      this._products = data;
+    });
+  }
+
+  public handleAllProductsResearch() {
+    this.productsService.getProducts().subscribe((data) => {
+      this._products = data;
+    });
+  }
+
   ngOnInit(): void {
     this.productsService.getProducts().subscribe((data) => {
       this._products = data;

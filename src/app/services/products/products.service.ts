@@ -15,6 +15,12 @@ export class ProductsService {
     return this.http.get(this.dataSource) as Observable<Product[]>;
   }
 
+  getOnSalesProducts(): Observable<Product[]> {
+    return this.http.get(this.dataSource + '?onsales=true') as Observable<
+      Product[]
+    >;
+  }
+
   getProduct(slug: string): Observable<Product> {
     return this.http.get(this.dataSource + '/' + slug) as Observable<Product>;
   }
