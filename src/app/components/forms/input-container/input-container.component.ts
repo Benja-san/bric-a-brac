@@ -11,16 +11,4 @@ export class InputContainerComponent {
   @Input() label!: string;
   @Input() controlName!: string;
   @Input() type!: string;
-
-  ngOnInit(): void {
-    this.userForm.addControl(
-      this.controlName,
-      new FormControl(
-        '',
-        this.controlName === 'email'
-          ? [Validators.required, Validators.email]
-          : [Validators.required]
-      )
-    );
-  }
 }

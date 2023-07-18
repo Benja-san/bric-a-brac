@@ -1,0 +1,23 @@
+<section class="login-section">
+  <h2>Connecte toi dès maintenant!</h2>
+  <form class="form" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <app-input-container
+      [userForm]="userForm"
+      label="Email"
+      controlName="email"
+      type="email"
+    ></app-input-container>
+    <app-input-container
+      [userForm]="userForm"
+      label="Mot de passe"
+      controlName="password"
+      type="password"
+    ></app-input-container>
+    <button class="send-button" [disabled]="!userForm.valid" type="submit">
+      Je m'inscris!
+    </button>
+  </form>
+</section>
+<section class="user-display">
+  {{ userForm.value | json }}
+</section>

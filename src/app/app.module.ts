@@ -12,6 +12,7 @@ import { ProductComponent } from './pages/product/product.component';
 import { UserRegisterComponent } from './pages/user-register/user-register.component';
 import { InputContainerComponent } from './components/forms/input-container/input-container.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UserLoginComponent } from './pages/user-login/user-login.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     ProductComponent,
     UserRegisterComponent,
     InputContainerComponent,
+    UserLoginComponent,
   ],
   imports: [
     BrowserModule,

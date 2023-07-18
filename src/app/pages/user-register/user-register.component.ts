@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-user-register',
@@ -7,7 +7,11 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./user-register.component.scss'],
 })
 export class UserRegisterComponent {
-  userForm = this.fb.group({});
+  userForm = this.fb.group({
+    firstname: new FormControl('', [Validators.required]),
+    lastname: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email]),
+  });
   constructor(private fb: FormBuilder) {}
   onSubmit() {
     alert(`Merci pour votre adhésion ! ${JSON.stringify(this.userForm.value)}`);
